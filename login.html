@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .welcome {
+            flex: 1;
+            padding: 20px;
+        }
+        .welcome h1 {
+            color: #1877f2;
+            font-size: 36px;
+            margin: 0;
+        }
+        .welcome p {
+            font-size: 20px;
+            color: #606770;
+        }
+        .login-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .login-form h2 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box; /* Adicionado para garantir que o padding não ultrapasse as margens */
+        }
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1877f2;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #165ec9;
+        }
+        .register-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .register-link a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome">
+            <h1>Bem-vindo(a) ao Teela</h1>
+            <p>Soluções em Manutenção Hoteleira.</p>
+        </div>
+        <div class="login-form">
+            <h2>Faça seu Login</h2>
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <input type="text" placeholder="Digite o seu e-mail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Digite a sua senha" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Entrar</button>
+                </div>
+            </form>
+            <div class="register-link">
+                <p><a href="/recover">Esqueceu a senha?</a></p>
+                <p><a href="/register">Criar nova conta</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
